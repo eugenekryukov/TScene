@@ -14,7 +14,7 @@ TScene is a TControl descendant which incapsulated IScene interface and provide 
 
 When TScene paints to the form canvas it paints his buffer only. If children control want to be updated, TScene paints this control to own buffer and keep it unmodified to next update requiest.
 
-Using of TScene allows dramatically improve drawing performance of complicated controls tree or complcated control (for example group of TPath).
+Using of TScene allows dramatically improve drawing performance of complicated controls tree or complcated control (for example group of TPath or big image).
 
 TScene break FM drawing model, which means when form paints all his children it stops on TScene and doesn't process TScene's children controls. 
 
