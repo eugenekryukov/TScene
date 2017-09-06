@@ -16,6 +16,8 @@ When TScene paints to the form canvas it paints his buffer only. If children con
 
 Using of TScene allows dramatically improve drawing performance of complicated controls tree or complcated control (for example group of TPath).
 
+TScene break FM drawing model, which means when form paints all his children it stops on TScene and doesn't process TScene's children controls. 
+
 # Compatibility
 
 TScene tested on Delphi Tokyo, but can be used in old version
