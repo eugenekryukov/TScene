@@ -22,4 +22,8 @@ TScene break FM drawing model, which means when form paints all his children it 
 
 # Compatibility
 
-TScene tested on Delphi Tokyo, but can be used in old version
+TScene tested on Delphi Tokyo. Supports all FireMonkey platforms. Linux version requires FmxLinux from http://www.fmxlinux.com
+
+Copyright (c) 2017 Eugene Kryukov
+
+http://www.ksdev.com
