@@ -81,7 +81,11 @@ type
   protected
     procedure Paint; override;
     procedure DoAddObject(const AObject: TFmxObject); override;
+    {$IF CompilerVersion >= 32}
     procedure DoResized; override;
+    {$ELSE}
+    procedure Resize; override;
+    {$ENDIF}
     function ObjectAtPoint(P: TPointF): IControl; override;
   public
     constructor Create(AOwner: TComponent); override;
@@ -120,7 +124,9 @@ type
     property OnPainting;
     property OnPaint;
     property OnResize;
+    {$IF CompilerVersion >= 32}
     property OnResized;
+    {$ENDIF}
     { Drag and Drop events }
     property OnDragEnter;
     property OnDragLeave;
@@ -451,7 +457,11 @@ begin
     inherited;
 end;
 
+{$IF CompilerVersion >= 32}
 procedure TCustomScene.DoResized;
+{$ELSE}
+procedure TCustomScene.Resize;
+{$ENDIF}
 begin
   inherited;
   if FScene <> nil then
