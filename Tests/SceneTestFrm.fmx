@@ -15,63 +15,79 @@ object Form27: TForm27
   object Scene1: TScene
     Position.X = 64.000000000000000000
     Position.Y = 64.000000000000000000
-    Size.Width = 361.000000000000000000
-    Size.Height = 273.000000000000000000
+    Size.Width = 400.000000000000000000
+    Size.Height = 300.000000000000000000
     Size.PlatformDefault = False
     object PaintBox1: TPaintBox
       Align = Client
-      Size.Width = 361.000000000000000000
-      Size.Height = 273.000000000000000000
+      Size.Width = 400.000000000000000000
+      Size.Height = 300.000000000000000000
       Size.PlatformDefault = False
       OnPaint = PaintBox1Paint
     end
-  end
-  object Selection1: TSelection
-    GripSize = 9.000000000000000000
-    HideSelection = False
-    Proportional = False
-    Position.X = 352.000000000000000000
-    Position.Y = 128.000000000000000000
-    Size.Width = 201.000000000000000000
-    Size.Height = 129.000000000000000000
-    Size.PlatformDefault = False
-    ShowHandles = True
   end
   object Panel1: TPanel
     Position.X = 64.000000000000000000
     Position.Y = 400.000000000000000000
-    Size.Width = 361.000000000000000000
-    Size.Height = 289.000000000000000000
+    Size.Width = 400.000000000000000000
+    Size.Height = 300.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
     object PaintBox2: TPaintBox
       Align = Client
-      Size.Width = 361.000000000000000000
-      Size.Height = 289.000000000000000000
+      Size.Width = 400.000000000000000000
+      Size.Height = 300.000000000000000000
       Size.PlatformDefault = False
-      Visible = False
       OnPaint = PaintBox1Paint
-    end
-  end
-  object Ellipse1: TEllipse
-    Anchors = [akTop, akRight]
-    Position.X = 472.000000000000000000
-    Position.Y = 336.000000000000000000
-    Size.Width = 289.000000000000000000
-    Size.Height = 50.000000000000000000
-    Size.PlatformDefault = False
-    object FloatAnimation1: TFloatAnimation
-      Enabled = True
-      Duration = 2.000000000000000000
-      Loop = True
-      PropertyName = 'RotationAngle'
-      StartValue = 0.000000000000000000
-      StopValue = 360.000000000000000000
     end
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer
     Left = 608
     Top = 544
+  end
+  object Selection1: TSelection
+    GripSize = 9.000000000000000000
+    HideSelection = False
+    Proportional = False
+    Position.X = 504.000000000000000000
+    Position.Y = 128.000000000000000000
+    Size.Width = 201.000000000000000000
+    Size.Height = 129.000000000000000000
+    Size.PlatformDefault = False
+    ShowHandles = True
+    object Ellipse1: TEllipse
+      Align = Client
+      HitTest = False
+      Size.Width = 201.000000000000000000
+      Size.Height = 129.000000000000000000
+      Size.PlatformDefault = False
+      object FloatAnimation1: TFloatAnimation
+        Enabled = True
+        Duration = 2.000000000000000000
+        Loop = True
+        PropertyName = 'RotationAngle'
+        StartValue = 0.000000000000000000
+        StopValue = 360.000000000000000000
+      end
+    end
+  end
+  object Label1: TLabel
+    Position.X = 64.000000000000000000
+    Position.Y = 40.000000000000000000
+    Size.Width = 377.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'TScene with TPaintBox with complex drawing'
+    TabOrder = 5
+  end
+  object Label2: TLabel
+    Position.X = 64.000000000000000000
+    Position.Y = 376.000000000000000000
+    Size.Width = 377.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'TPanel with TPaintBox with complex drawing'
+    TabOrder = 4
   end
 end

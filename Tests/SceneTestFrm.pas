@@ -17,6 +17,8 @@ type
     FloatAnimation1: TFloatAnimation;
     PaintBox2: TPaintBox;
     Timer1: TTimer;
+    Label1: TLabel;
+    Label2: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure PaintBox1Paint(Sender: TObject; Canvas: TCanvas);
     procedure FormPaint(Sender: TObject; Canvas: TCanvas; const ARect: TRectF);
