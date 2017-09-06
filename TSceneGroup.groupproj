@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{481E5EAF-9317-45BB-BF85-DBC61F073410}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Tests\SceneTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Packages\TScene_Tokyo.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="SceneTest">
+        <MSBuild Projects="Tests\SceneTest.dproj"/>
+    </Target>
+    <Target Name="SceneTest:Clean">
+        <MSBuild Projects="Tests\SceneTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SceneTest:Make">
+        <MSBuild Projects="Tests\SceneTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TScene_Tokyo">
+        <MSBuild Projects="Packages\TScene_Tokyo.dproj"/>
+    </Target>
+    <Target Name="TScene_Tokyo:Clean">
+        <MSBuild Projects="Packages\TScene_Tokyo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TScene_Tokyo:Make">
+        <MSBuild Projects="Packages\TScene_Tokyo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="SceneTest;TScene_Tokyo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="SceneTest:Clean;TScene_Tokyo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="SceneTest:Make;TScene_Tokyo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
