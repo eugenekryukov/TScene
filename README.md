@@ -18,6 +18,8 @@ Using of TScene allows dramatically improve drawing performance of complicated c
 
 TScene break FM drawing model, which means when form paints all his children it stops on TScene and doesn't process TScene's children controls. 
 
+[![TScene Demo](https://img.youtube.com/vi/LawyqK2tz9E/0.jpg)](https://www.youtube.com/watch?v=LawyqK2tz9E)
+
 # Compatibility
 
 TScene tested on Delphi Tokyo, but can be used in old version
